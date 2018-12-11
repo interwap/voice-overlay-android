@@ -1,0 +1,33 @@
+# IDE Files
+*.iml
+.idea
+projectFilesBackup
+.gradletasknamecache
+
+# Build
+.gradle
+/build
+/captures
+.bintray.json
+
+# Local setup
+/local.properties
+
+# OS Files
+.DS_Store
+
+# Generated doc
+docs-dev/
+docs-preview/
+preview.zip
+
+# Logs
+npm-debug.log
+fastlane/README.md
+fastlane/report.xml
+
+# Bitrise
+bitrise.yml
+
+# Fastlane
+vendor/

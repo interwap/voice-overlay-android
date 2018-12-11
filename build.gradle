@@ -1,0 +1,31 @@
+buildscript {
+    apply from: 'dependency.gradle'
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.0-alpha12'
+        classpath "com.github.ben-manes:gradle-versions-plugin:$benManes"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlins"
+        classpath "org.jetbrains.dokka:dokka-android-gradle-plugin:$dokka"
+        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:$bintray"
+        classpath "com.github.dcendents:android-maven-gradle-plugin:$maven"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+    buildscript {
+        apply plugin: 'com.github.ben-manes.versions'
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
